@@ -45,6 +45,7 @@ class _FutureFlashState extends State<FutureFlash> {
         child: FutureBuilder(
           future: _future,
           builder: (context, snapshot) {
+            print("Rebuilding ${snapshot.connectionState}");
             return Text('state: ${snapshot.connectionState}');
           },
         ),
